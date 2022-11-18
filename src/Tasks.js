@@ -40,9 +40,9 @@ const Tasks = (props) =>{
                 <h3>Completed</h3>
 
                         <ul>
-                            <li><Link to={`/task/${address}`} className="linky">Task1</Link></li>
-                            <li><Link to={`/task/${address}`} className="linky">Task1</Link></li>
-                            <li><Link to={`/task/${address}`} className="linky">Task1</Link></li>
+                            <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
+                            <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
+                            <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
                         </ul>
                     
                 </div>

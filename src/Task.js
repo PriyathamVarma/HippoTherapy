@@ -23,6 +23,7 @@ const Task = ({props,match,location}) =>{
 
             <Header
             title="Task"
+            address={address}
             />
 
 
@@ -30,6 +31,7 @@ const Task = ({props,match,location}) =>{
 
 
             <Footer
+            address={address}
             />
 
         </div>
