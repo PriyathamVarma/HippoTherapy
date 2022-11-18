@@ -2,8 +2,22 @@ import React from 'react';
 import './App.css';
 import Earth from './images/Earth.png';
 import Hippo from './images/hippo.png';
+import { ethers } from "ethers";
+import { useState } from 'react';
+import { redirect,useNavigate } from "react-router-dom";
+
 
 const App = () => {
+
+  // State variables
+  const [account,setAccount] = useState('');
+
+  const navigate = useNavigate();
+
+  const navigateToProfile = (args) => {
+    // 👇️ navigate to /contacts
+    navigate(`/profile/${args}`);
+  };
 
   const _benefits =[
     {img:'',title:"Effective and efficient",description:"Our sessions effectively and efficiently teach reading, listening, and speaking skills. Check out our latest research!"},
@@ -12,6 +26,49 @@ const App = () => {
     {img:'',title:"Have fun with it!",description:"Effective learning doesn’t have to be boring! Build your skills each day with engaging exercises and playful characters."},
 
   ]
+
+  // Methods
+  const connectWallet = async () =>{
+    if(window.ethereum){
+      console.log("You have what you need ;)")
+      // A Web3Provider wraps a standard Web3 provider, which is
+      // what MetaMask injects as window.ethereum into each page
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+
+      // MetaMask requires requesting permission to connect users accounts
+      await provider.send("eth_requestAccounts", []).then((res) =>{
+        setAccount(res[0]);
+        console.log("User has granted access to accounts",account);
+
+          //navigateToProfile(account);
+          if(account !== ""){
+            console.log('Hurray');
+            navigateToProfile(account);
+          }
+          else{
+            console.log('empty');
+          }
+
+        
+
+      }).catch(() =>{
+        console.log("User has denied access to accounts")
+        }
+        );
+
+      // The MetaMask plugin also allows signing transactions to
+      // send ether and pay to change state within the blockchain.
+      // For this, you need the account signer...
+      const signer = provider.getSigner(0)
+
+      console.log(signer);
+    }
+    else{
+      console.log("No Ethereum browser detected");
+    }
+  }
+
+
   return (
     <div className="App">
       {/* Header */}
@@ -25,7 +82,8 @@ const App = () => {
 
         <img src={Earth}/>
         <h2>The fun way to improve your mental wellness!</h2>
-        <button>Connect Wallet</button>
+        <button onClick={connectWallet}>Connect Wallet</button>
+        
 
       </div>
 
@@ -40,7 +98,7 @@ const App = () => {
       <div className="benefits">
       {_benefits.map((item,index)=>{
           return(
-            <div>
+            <div key={index}>
 
               <div className='benefits-div'>
 

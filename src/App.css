@@ -89,3 +89,170 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+/* main-footer */
+.main-footer{
+  border: 1px solid black;
+  bottom:0;
+  position: absolute;
+  width: 100%;
+  background-color: #e67e22;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 8vh;
+}
+
+.links{
+  text-decoration: none;
+  color:aliceblue;
+}
+
+.main-header{
+
+  border: 1px solid black;
+  top:0;
+  position: sticky;
+  width: 100%;
+  background-color: #e67e22;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 8vh;
+
+}
+
+.nft-div{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.nft-header img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+.nft-body{
+  text-align: justify;
+}
+
+.nft-body ul{
+  list-style-type: none;
+}
+
+.nft-body li{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-bar{
+
+  width: 30vh;
+  height: 2vh;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px gray;
+
+}
+
+.sub-bar{
+
+  width: 10vh;
+  height: 2vh;
+  background-color:#e67e22;
+  border: none;
+  border-radius: 10px;
+
+}
+
+.form-div{
+  border:1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+input[type=range] {
+  height: 39px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 2px #A6A6A6;
+  background: #FF96AB;
+  border-radius: 4px;
+  border: 2px solid #F27B7F;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 2px #A6A6A6;
+  border: 2px solid #F27B7F;
+  height: 30px;
+  width: 30px;
+  border-radius: 0px;
+  background: #FF96AB;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #FF96AB;
+}
+
+.tasks{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+
+.pending-tasks ul{
+  list-style-type: none;
+
+}
+
+.pending-tasks li{
+
+  border: 1px solid black;
+  width: 40vh;
+  padding: 10px;
+  margin: 2vh;
+  box-shadow: 2px 2px black;
+  background-color: antiquewhite;
+}
+
+.linky{
+  text-decoration: none;
+  color:black;
+  font-weight: bolder;
+}
+
+
+.done-tasks li{
+
+  list-style-type: none;
+
+}
+
+.done-tasks li{
+
+  border: 1px solid black;
+  width: 40vh;
+  padding: 10px;
+  margin: 2vh;
+  box-shadow: 2px 2px black;
+
+}
+
