@@ -128,7 +128,6 @@
 }
 
 .nft-div{
-  border: 1px solid black;
   margin: 10px;
   padding:10px;
 }
@@ -162,7 +161,6 @@
 
 .nft-body{
   text-align: justify;
-  border: 1px solid black;
   width: 50vh;
   display: block;
   margin-left: auto;
@@ -171,6 +169,9 @@
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
   color: white;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  padding: 2px;
 }
 
 .nft-body:hover {
@@ -204,6 +205,7 @@
 .nft-body li{
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 
 .main-bar{
@@ -211,7 +213,6 @@
   width: 30vh;
   height: 2vh;
   background-color: aliceblue;
-  border: 1px solid black;
   border-radius: 10px;
   box-shadow: 2px 2px gray;
 
@@ -325,3 +326,53 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 }
 
+.details{
+  background-color: #23d5ab;
+  padding: 10px;
+  color:'white';
+  font-weight: bolder;
+  height: 100vh;
+  
+}
+
+.details form{
+
+  display: block;
+  margin: 0 auto;
+  margin-left: 10%;
+  margin-top: 20vh ;
+  
+}
+
+.details input{
+  border:none;
+  box-shadow: 2px 2px gray;
+  border-radius: 10px;
+  height: 5vh;
+  width: 35vh;
+}
+
+.details input[type="submit"]{
+  background-color: #e67e22 !important;
+  box-shadow: 2px 2px white !important;
+}
+
+.lists-div{
+  margin: 10px;
+}
+
+.lists-element{
+  border: 1px solid black;
+  box-shadow: 2px 2px gray;
+  margin: 2px;
+}
+
+.lists-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.lists-body{
+  text-align: center;
+}

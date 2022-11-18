@@ -5,6 +5,7 @@ import Hippo from './images/hippo.png';
 import { ethers } from "ethers";
 import { useState } from 'react';
 import { redirect,useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 
 const App = () => {
@@ -17,6 +18,11 @@ const App = () => {
   const navigateToProfile = (args) => {
     // 👇️ navigate to /contacts
     navigate(`/profile/${args}`);
+  };
+
+  const navigateToDetails = (args) => {
+    // 👇️ navigate to /contacts
+    navigate(`/details/${args}`);
   };
 
   const _benefits =[
@@ -42,8 +48,38 @@ const App = () => {
 
           //navigateToProfile(account);
           if(account !== ""){
-            console.log('Hurray');
-            navigateToProfile(account);
+
+            axios.get(`http://localhost:8082/register/${account}`).then((res)=>{
+              console.log(res.data[0].address)
+              const _yes = res.data[0].address;
+
+            if(_yes === account){
+              console.log('exists');
+              navigateToProfile(account);
+            }else{
+              console.log('Doesnt exist');
+            }
+
+            }).catch((err)=>{
+              console.log(err);
+              axios.post(`http://localhost:8082/register/${account}`).then((res)=>{
+                console.log(res.data);
+                navigateToDetails(account);
+              }).catch((err)=>{
+                console.log(err);
+              });
+              
+            });
+
+            //console.log(serachData);
+            
+            // const postingData = axios.post(`http://localhost:8082/register/${account}`);
+            // try{
+            //   navigateToProfile(account);
+            // }catch(err){
+            //   console.log(err);
+            // }
+            
           }
           else{
             console.log('empty');
