@@ -18,11 +18,14 @@ const Task = ({props,match,location}) =>{
    const address = queryParams.get('address');
     
    const _data = [
-       {task:"Do Yoga",duration:"10 - 20 mins",description:"Do yoga for your won benefits"},
-       {task:"Watch the Video",duration:"10 mins",description:"Watch this video on breathing excercise"}]
+       {task:"Journal",duration:"10 mins",description:"Write about how your day went"},
+       {task:"Memory game",duration:"10 - 20 mins",description:"Think of three things you are graetful for today"},
+       {task:"Go for walk",duration:"30 mins",description:"Go for a walk in the park"},
+       {task:"Experiment",duration:"10 - 20 mins",description:"Experiment with something new"},
+       {task:"Smile",duration:"5 mins",description:"Make yourself smile - Hakuna Matuta"}]
 
     return(
-        <div >
+        <div className='task-space'>
 
             <Header
             title="Task"
@@ -36,7 +39,8 @@ const Task = ({props,match,location}) =>{
                     return(
 
                         <List
-                        key={index}/>
+                        key={index}
+                        data={value}/>
 
                     )
                 })}

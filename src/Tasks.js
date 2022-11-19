@@ -14,7 +14,7 @@ const Tasks = (props) =>{
     const {address} = useParams();
 
     return(
-        <div >
+        <div className='tasks-space'>
 
             <Header
             title="Tasks"
@@ -28,9 +28,9 @@ const Tasks = (props) =>{
                     <h3>Pending</h3>
 
                     <ul>
-                        <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
-                        <li><Link to={`/task/${address}`} className="linky">Task1</Link></li>
-                        <li><Link to={`/task/${address}`}className="linky">Task1</Link></li>
+                        <li><Link to={`/task/${address}`} className="linky">Task #22</Link></li>
+                        <li><Link to={`/task/${address}`} className="linky">Task #26</Link></li>
+                        <li><Link to={`/task/${address}`} className="linky">Task #29</Link></li>
                     </ul>
 
                 </div>
@@ -40,9 +40,9 @@ const Tasks = (props) =>{
                 <h3>Completed</h3>
 
                         <ul>
-                            <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
-                            <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
-                            <li><Link to={`/task/${address}?address=${address}`} className="linky">Task1</Link></li>
+                            <li><Link to={`/task/${address}`} className="linky">Task #12</Link></li>
+                            <li><Link to={`/task/${address}`} className="linky">Task #18</Link></li>
+                            <li><Link to={`/task/${address}`} className="linky">Task #20</Link></li>
                         </ul>
                     
                 </div>

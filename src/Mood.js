@@ -93,7 +93,7 @@ const Mood = (props) =>{
 
 
     return(
-        <div>
+        <div className='mood-space'>
             <Header
             title="Mood Meter"
             address={address}

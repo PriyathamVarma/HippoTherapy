@@ -7,9 +7,11 @@ import Footer from './Footer';
 import { useParams,useLocation } from 'react-router';
 import { useState } from 'react';
 
-const List = ({props,match,location}) =>{
+const List = (props) =>{
 
     const {address} = useParams();
+
+    const {task,duration,description} = props.data;
 
 
     return(             
@@ -18,14 +20,14 @@ const List = ({props,match,location}) =>{
 
                     <div className='lists-head'>
 
-                        <h5> Do Yoga </h5>
-                        <h6> Duration: 10 - 20 mins </h6>
+                        <h5> {task} </h5>
+                        <h6> Duration: {duration} </h6>
 
                     </div>
 
                     <div className='lists-body'>
 
-                        <p>Do Yoga with for your own benefits</p>
+                        <p>{description}</p>
 
                     </div>
 

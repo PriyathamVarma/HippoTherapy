@@ -80,8 +80,8 @@ const App = () => {
             // }catch(err){
             //   console.log(err);
             // }
-
-            navigateToProfile(account);
+            navigateToDetails(account);
+            //navigateToProfile(account);
             
           }
           else{
@@ -112,7 +112,7 @@ const App = () => {
     <div className="App">
       {/* Header */}
       <div className="header">
-        <h4>Elev8.io</h4>
+        <h4>Elevate</h4>
         <h4>Country:<span>UK</span></h4>
       </div>
 

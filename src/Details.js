@@ -7,6 +7,7 @@ import Header from './Header';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { redirect,useNavigate } from "react-router-dom";
+import Elev from './images/Elev8.io2.png';
 
 const Details = (props) =>{
 
@@ -28,22 +29,24 @@ const Details = (props) =>{
         const _coupon   = event.target.coupon.value;
         const _country  = event.target.country.value;
 
-        const obj =  {
-            age : _age,
-            gender : _gender,
-            coupon : _coupon,
-            country: _country,
-            account : address
-        }
+        navigateToProfile(address);
 
-        console.log(obj);
+        // const obj =  {
+        //     age : _age,
+        //     gender : _gender,
+        //     coupon : _coupon,
+        //     country: _country,
+        //     account : address
+        // }
 
-        axios.post(`http://localhost:8082/details/${address}`,obj).then((res)=>{
-            console.log(res);
-            navigateToProfile(address);
-        }).catch((err)=>{
-            console.log(err);
-        });
+        // console.log(obj);
+
+        // axios.post(`http://localhost:8082/details/${address}`,obj).then((res)=>{
+        //     console.log(res);
+        //     navigateToProfile(address);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // });
 
     } 
 

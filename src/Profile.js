@@ -23,7 +23,7 @@ const Profile = (props) =>{
     console.log(address)
 
     return(
-        <div>
+        <div className='profile-div'>
 
             <Header
             title="Profile"
@@ -35,41 +35,25 @@ const Profile = (props) =>{
  
                 </div>
 
-                <div class="nft-body">
-                    <ul>
-                        <li><strong>Name:</strong>HippyHoppy</li>
+                <div className="nft-body">
 
-                        <li><strong>Happiness:</strong>
-                        <div className='main-bar'>
-                            <div className='sub-bar' style={{backgroundColor:'#e67e22',width: '10vh'}}></div>
-                        </div>
-                        </li>
+                <div className="wrap-circles">
+                    <div className="circle per-0">
+                        <div className="inner">Joy</div>
+                    </div>
+                    <div className="circle per-25">
+                        <div className="inner">Mindful</div>
+                    </div>
+                    <div className="circle per-50">
+                        <div className="inner">Calm</div>
+                    </div>
+                    <div className="circle per-75">
+                        <div className="inner">Active</div>
+                    </div>
+                </div>
 
-                        <li><strong>Joyfullness:</strong>
-                        <div className='main-bar'>
-                            <div className='sub-bar' style={{backgroundColor:'green',width: '20vh'}}></div>
-                        </div>
-                        </li>
 
-                        <li><strong>Low Anxiety:</strong>
-                        <div className='main-bar'>
-                            <div className='sub-bar' style={{backgroundColor:'green',width: '20vh'}}></div>
-                        </div>
-                        </li>
-
-                        <li><strong>Low Stress:</strong>
-                        <div className='main-bar'>
-                            <div className='sub-bar' style={{backgroundColor:'green',width: '20vh'}}></div>
-                        </div>
-                        </li>
-
-                        <li><strong>Mindful:</strong>
-                        <div className='main-bar'>
-                            <div className='sub-bar' style={{backgroundColor:'green',width: '20vh'}}></div>
-                        </div>
-                        </li>
-
-                    </ul>
+                   
                 </div>
             </div>
 
