@@ -472,3 +472,25 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.75);
 }
+
+.nft-img{
+  background-image: url(./images/one.jpeg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vh;
+}
+
+.Linkz{
+  text-decoration: none;
+  color: white;
+}
+
+.qr img{
+  width: 50vh;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}

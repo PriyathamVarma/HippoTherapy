@@ -9,6 +9,8 @@ const Header = (props) =>{
         <div className='main-header'>
 
             <h3>{props.title}</h3>
+
+            <h3> <Link to="/code" className='Linkz'>QR</Link> </h3>
             
 
         </div>

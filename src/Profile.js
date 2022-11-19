@@ -6,6 +6,10 @@ import Header from './Header';
 import Footer from './Footer';
 import { useParams } from 'react-router';
 //import ReactThreeFbxViewer from 'react-three-fbx-for-pyt';
+import One from './images/one.jpeg';
+import Two from './images/one.jpeg';
+import { useState } from 'react';
+
 
 //let fbxUrl = require('./images/poly.fbx');
 
@@ -20,7 +24,16 @@ const Profile = (props) =>{
     //const _address = getParams();
     const { address } = useParams();
 
-    console.log(address)
+    console.log(address);
+
+
+    const [display,setDisplay] = useState(true);
+
+    const displayChange = () =>{
+        console.log(display);
+        setDisplay(!display);
+        console.log(display);
+    }
 
     return(
         <div className='profile-div'>
@@ -31,7 +44,8 @@ const Profile = (props) =>{
 
             <div className='nft-div'>
                 <div class="nft-header">
-                    <img src={Hippo}/>
+                    <img src={display? One : Two} onMouseOver={displayChange}/>
+                    <div className='nft-img'></div>
  
                 </div>
 

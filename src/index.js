@@ -10,6 +10,7 @@ import Mood from './Mood';
 import Tasks from './Tasks';
 import Task from './Task';
 import List from './List';
+import Code from './Code';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +26,7 @@ root.render(
       <Route path="task/:id" element={<Task/>} /> 
       <Route path="details/:address" element={<Details/>} /> 
       <Route path="lists/:address" element={<List/>} /> 
+      <Route path="code" element={<Code/>} /> 
   </Routes>
 </BrowserRouter>
 );
