@@ -6,6 +6,7 @@ import { ethers } from "ethers";
 import { useState } from 'react';
 import { redirect,useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Elev from './images/Elev8.io.png';
 
 
 const App = () => {
@@ -49,27 +50,27 @@ const App = () => {
           //navigateToProfile(account);
           if(account !== ""){
 
-            axios.get(`http://localhost:8082/register/${account}`).then((res)=>{
-              console.log(res.data[0].address)
-              const _yes = res.data[0].address;
+            // axios.get(`http://localhost:8082/register/${account}`).then((res)=>{
+            //   console.log(res.data[0].address)
+            //   const _yes = res.data[0].address;
 
-            if(_yes === account){
-              console.log('exists');
-              navigateToProfile(account);
-            }else{
-              console.log('Doesnt exist');
-            }
+            // if(_yes === account){
+            //   console.log('exists');
+            //   navigateToProfile(account);
+            // }else{
+            //   console.log('Doesnt exist');
+            // }
 
-            }).catch((err)=>{
-              console.log(err);
-              axios.post(`http://localhost:8082/register/${account}`).then((res)=>{
-                console.log(res.data);
-                navigateToDetails(account);
-              }).catch((err)=>{
-                console.log(err);
-              });
+            // }).catch((err)=>{
+            //   console.log(err);
+            //   axios.post(`http://localhost:8082/register/${account}`).then((res)=>{
+            //     console.log(res.data);
+            //     navigateToDetails(account);
+            //   }).catch((err)=>{
+            //     console.log(err);
+            //   });
               
-            });
+            // });
 
             //console.log(serachData);
             
@@ -79,6 +80,8 @@ const App = () => {
             // }catch(err){
             //   console.log(err);
             // }
+
+            navigateToProfile(account);
             
           }
           else{
@@ -109,56 +112,19 @@ const App = () => {
     <div className="App">
       {/* Header */}
       <div className="header">
-        <h3>HappyTherapy</h3>
-        <h3>Country:<span>UK</span></h3>
+        <h4>Elev8.io</h4>
+        <h4>Country:<span>UK</span></h4>
       </div>
 
       {/* Main */}
       <div className="main">
 
-        <img src={Earth}/>
-        <h2>The fun way to improve your mental wellness!</h2>
         <button onClick={connectWallet}>Connect Wallet</button>
         
 
       </div>
 
-      {/* Intro */}
-      <div className="intro">
-      <img src={Hippo}/>
-        <h4>The worlds first Blockchain and AI-based mental wellness app</h4>
-        <p>HippoTherapy is the world's first platform that incentives you for taking care of your own mental health.</p>
-      </div>
 
-      {/* Benefits */}
-      <div className="benefits">
-      {_benefits.map((item,index)=>{
-          return(
-            <div key={index}>
-
-              <div className='benefits-div'>
-
-                <img alt="benefits"/>
-                <h4>{item.title}</h4>
-
-              </div>
-              <p>{item.description}</p>
-
-            </div>
-          )
-        })}
-      </div>
-
-
-      {/* Tips */}
-      <div className="tips border">
-        
-      </div>
-
-      {/* Footer */}
-      <div className="footer border">
-        Footer
-      </div>
     </div>
   );
 }

@@ -17,10 +17,11 @@
 }
 
 .main{
-  background-image: url('./images/syncmain.png');
-  min-height: 50vh;
+  background-image: url('./images/Elev8.io.png');
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 .main h2{
@@ -37,6 +38,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  
 
 }
 
@@ -52,6 +54,7 @@
   font-weight: bolder;
   border-radius: 10px;
   box-shadow: 2px 2px #f1c40f;
+  margin-top: 20%;
 }
 
 .intro{
