@@ -28,7 +28,7 @@ const Task = ({props,match,location}) =>{
         <div className='task-space'>
 
             <Header
-            title="Task"
+            title="Goal"
             address={address}
             />
 

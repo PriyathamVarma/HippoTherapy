@@ -9,6 +9,7 @@ import { useParams } from 'react-router';
 import One from './images/one.jpeg';
 import Two from './images/one.jpeg';
 import { useState } from 'react';
+import vide from './images/video1.mp4';
 
 
 //let fbxUrl = require('./images/poly.fbx');
@@ -44,7 +45,10 @@ const Profile = (props) =>{
 
             <div className='nft-div'>
                 <div class="nft-header">
-                    <img src={display? One : Two} onMouseOver={displayChange}/>
+                    
+                    <video width="330" height="400" controls autoPlay muted>
+                    <source src={vide} type="video/mp4"/>
+                    </video>
                     <div className='nft-img'></div>
  
                 </div>

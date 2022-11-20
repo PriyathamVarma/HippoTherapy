@@ -17,7 +17,7 @@ const Tasks = (props) =>{
         <div className='tasks-space'>
 
             <Header
-            title="Tasks"
+            title="Goals"
             address={address}/>
 
 
@@ -28,9 +28,9 @@ const Tasks = (props) =>{
                     <h3>Pending</h3>
 
                     <ul>
-                        <li><Link to={`/task/${address}`} className="linky">Task #22</Link></li>
-                        <li><Link to={`/task/${address}`} className="linky">Task #26</Link></li>
-                        <li><Link to={`/task/${address}`} className="linky">Task #29</Link></li>
+                        <li><Link to={`/task/${address}`} className="linky">Goal #22</Link></li>
+                        <li><Link to={`/task/${address}`} className="linky">Goal #26</Link></li>
+                        <li><Link to={`/task/${address}`} className="linky">Goal #29</Link></li>
                     </ul>
 
                 </div>
@@ -40,9 +40,9 @@ const Tasks = (props) =>{
                 <h3>Completed</h3>
 
                         <ul>
-                            <li><Link to={`/task/${address}`} className="linky">Task #12</Link></li>
-                            <li><Link to={`/task/${address}`} className="linky">Task #18</Link></li>
-                            <li><Link to={`/task/${address}`} className="linky">Task #20</Link></li>
+                            <li><Link to={`/task/${address}`} className="linky">Goal #12</Link></li>
+                            <li><Link to={`/task/${address}`} className="linky">Goal #18</Link></li>
+                            <li><Link to={`/task/${address}`} className="linky">Goal #20</Link></li>
                         </ul>
                     
                 </div>
